@@ -1,7 +1,7 @@
 import VideoCard from "./VideoCard"
 
 const Feed = ({movies}) => {
-  console.log(movies)
+  // console.log(movies)
   return (
     <div className="feed">
       {

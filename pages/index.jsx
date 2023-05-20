@@ -19,11 +19,11 @@ export default Home;
 
 export async function getServerSideProps() {
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=9e15a513af79e165ed3ac970310ce0c2`
+    `https://www.omdbapi.com/?apikey=e8699f24&s=titanic`
   );
   const data = await res.json();
 
   return {
-    props: { movies: data.results },
+    props: { movies: data.Search },
   };
 }
