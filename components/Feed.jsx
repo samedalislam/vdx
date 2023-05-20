@@ -1,20 +1,12 @@
 import VideoCard from "./VideoCard"
 
-const Feed = () => {
+const Feed = ({movies}) => {
+  console.log(movies)
   return (
     <div className="feed">
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
+      {
+        movies.map((m, i) => <VideoCard key={i} m={m} />)
+      }
     </div>
   )
 }
